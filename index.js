@@ -7,10 +7,6 @@ const port = 3000
 
 app.use(cors())
 
-app.get('/test', (req, res) => {
-  res.send('Test route works!');
-});
-
 app.use('/products',productRoutes)
 app.use('/categories',categoryRoutes)
 
