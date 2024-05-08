@@ -1,0 +1,14 @@
+{
+  "name": "031-express-js-intro",
+  "version": "1.0.0",
+  "description": "Laern ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anoop Wilson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
