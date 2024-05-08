@@ -1,33 +1,32 @@
 const express = require('express')
+const { getProducts } = require('../controllers/productController')
 const router = express.Router()
 
 //Get all products
 
-router.get('/products',(req,res)=>{
-  res.send('get product')
-})
+router.get('/', getProducts)
 
 // Get product by Id
 
-router.get('/products/:productId',(req,res)=>{
+router.get('/:productId',(req,res)=>{
   res.send('Not written')
 })
 
 // Add new product
 
-router.post('/products/:productId',(req,res)=>{
+router.post('/:productId',(req,res)=>{
   res.send('Not written')
 })
 
 // Update product
 
-router.patch('/products/:productId',(req,res)=>{
+router.patch('/:productId',(req,res)=>{
   res.send('Not written')
 })
 
 // Delete a product
 
-router.delete('/products/:productId',(req,res)=>{
+router.delete('/:productId',(req,res)=>{
   res.send('Not written')
 })
 
