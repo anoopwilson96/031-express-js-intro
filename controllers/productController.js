@@ -1,10 +1,31 @@
 
 const getProducts = (req,res)=>{
-  res.send('get all products')
+  res.send('Code for : Get all products')
+}
+
+const getProductById = (req,res)=>{
+  res.send('Code for : Get product by ID')
+}
+
+const postProduct = (req,res)=>{
+  res.send('Code for : Post new product')
+}
+
+const updateProduct = (req,res)=>{
+  res.send('Code for : Update a product')
+}
+
+const deleteProduct = (req,res)=>{
+  res.send('Code for : Delete a product')
 }
 
 
 
+
 module.exports = {
-  getProducts
+  getProducts,
+  postProduct,
+  getProductById,
+  updateProduct,
+  deleteProduct
 }
