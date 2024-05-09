@@ -1,5 +1,5 @@
 const express = require('express')
-const { getProducts } = require('../controllers/productController')
+const { getProducts, postProduct, getProductById, updateProduct, deleteProduct } = require('../controllers/productController')
 const router = express.Router()
 
 //Get all products
@@ -8,27 +8,19 @@ router.get('/', getProducts)
 
 // Get product by Id
 
-router.get('/:productId',(req,res)=>{
-  res.send('Not written')
-})
+router.get('/:productId',getProductById)
 
 // Add new product
 
-router.post('/:productId',(req,res)=>{
-  res.send('Not written')
-})
+router.post('/:productId',postProduct)
 
 // Update product
 
-router.patch('/:productId',(req,res)=>{
-  res.send('Not written')
-})
+router.patch('/:productId',updateProduct)
 
 // Delete a product
 
-router.delete('/:productId',(req,res)=>{
-  res.send('Not written')
-})
+router.delete('/:productId',deleteProduct)
 
 
 
