@@ -12,7 +12,7 @@ router.get('/:productId',getProductById)
 
 // Add new product
 
-router.post('/:productId',postProduct)
+router.post('/',postProduct)
 
 // Update product
 
