@@ -1,6 +1,8 @@
+const Product = require("../model/productModel");
 
-const getProducts = (req,res)=>{
-  res.send('Code for : Get all products')
+const getProducts = async (req,res)=>{
+ const products = await Product.find({});
+  res.json(products)
 }
 
 const getProductById = (req,res)=>{
