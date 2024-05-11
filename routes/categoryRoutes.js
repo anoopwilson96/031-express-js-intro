@@ -1,36 +1,28 @@
-const express = require('express')
+const express = require('express');
+const Category = require('../model/categoryModel');
+const { getCategories, getCategoryById, postCategory, patchCateGory, deleteCategory } = require('../controllers/categoryController');
 const router = express.Router()
 
 
 //Get all categories
 
-router.get('/',(req,res)=>{
-  res.send('Not written')
-})
+router.get('/', getCategories )
 
 // Get category by Id
 
-router.get('/:categoryId',(req,res)=>{
-  res.send('Not written')
-})
+router.get('/:categoryId',getCategoryById)
 
 // Add new category
 
-router.post('/:categoryId',(req,res)=>{
-  res.send('Not written')
-})
+router.post('/:categoryId',postCategory)
 
 // Update category
 
-router.patch('/:categoryId',(req,res)=>{
-  res.send('Not written')
-})
+router.patch('/:categoryId',patchCateGory)
 
 // Delete a category
 
-router.delete('/:categoryId',(req,res)=>{
-  res.send('Not written')
-})
+router.delete('/:categoryId',deleteCategory)
 
 
 
