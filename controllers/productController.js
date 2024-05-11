@@ -1,9 +1,17 @@
 const Product = require("../model/productModel");
 
+
 const getProducts = async (req,res)=>{
- const products = await Product.find({});
-  res.json(products)
+  try {
+    const products = await Product.find({});
+    res.status(200).json(products)
+    
+  } catch (error) {
+    res.status(404).send('Error 404: not found')
+    }
+
 }
+
 
 const getProductById = (req,res)=>{
   res.send('Code for : Get product by ID')
