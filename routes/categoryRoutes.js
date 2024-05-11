@@ -14,7 +14,7 @@ router.get('/:categoryId',getCategoryById)
 
 // Add new category
 
-router.post('/:categoryId',postCategory)
+router.post('/',postCategory)
 
 // Update category
 
