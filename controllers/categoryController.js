@@ -38,9 +38,11 @@ const postCategory = async (req,res)=>{
   const category = new Category (categoryData)
   // console.log(category) // new category with unique ID is displayed. This is called DOCUMENT
   await category.save()
-  res.json()
-
+  res.json(category)
 }
+
+
+
 
 const patchCateGory = (req,res)=>{
   res.send('Not written')
