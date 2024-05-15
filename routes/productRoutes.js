@@ -4,6 +4,7 @@ const router = express.Router()
 
 //Get all products
 
+
 router.get('/', getProducts)
 
 // Get product by Id
