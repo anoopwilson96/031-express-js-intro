@@ -13,12 +13,33 @@ const getProducts = async (req,res)=>{
 }
 
 
-const getProductById = (req,res)=>{
-  res.send('Code for : Get product by ID')
+const getProductById = async(req,res)=>{
+  try {
+    const product= await Product.findById(req.params.productId).exec();
+    res.status(200).json(product)
+  } catch (error) {
+    
+    res.status(404).send('Error 404: not found')
+    
+  }
+
 }
 
-const postProduct = (req,res)=>{
-  res.send('Code for : Post new product')
+
+const postProduct = async(req,res)=>{
+  try {
+    const productData = req.body
+  // console.log(productData)
+  const product = new Product (productData) 
+  //console.log(product)
+  await product.save()
+    res.status(201).json(product)
+    
+  } catch (error) {
+    res.status(400).send('Error 400: bad request')
+    
+  }
+  
 }
 
 const updateProduct = (req,res)=>{
