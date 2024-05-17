@@ -43,6 +43,7 @@ const postProduct = async(req,res)=>{
 }
 
 const updateProduct = (req,res)=>{
+  
   res.send('Code for : Update a product')
 }
 
