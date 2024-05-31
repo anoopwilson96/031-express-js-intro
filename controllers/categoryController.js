@@ -42,14 +42,36 @@ const postCategory = async (req,res)=>{
 }
 
 
+// update a category
 
 
-const patchCateGory = (req,res)=>{
-  res.send('Not written')
+const patchCateGory = async (req,res)=>{
+  try {
+    const updatedCategory = await Category.findByIdAndUpdate(req.params.categoryId,req.body, {new:true})
+    res.status(200).send(updatedCategory)
+  } catch (error) {
+    res.status(404).send("Error 404: not found")
+    
+  }
+
 }
-const deleteCategory = (req,res)=>{
-  res.send('Not written')
-}
+const deleteCategory = async (req, res) => {
+  try {
+    const deletedCategory = await Category.findByIdAndDelete(req.params.categoryId);
+
+    // Handle successful deletion (optional)
+    if (deletedCategory) {
+   
+      res.status(200).send('Category deleted successfully');
+    } else {
+      res.status(404).send('Category not found');
+    }
+  } catch (error) {
+  
+    res.status(500).send('Internal server error');
+  }
+};
+
 
 
 
