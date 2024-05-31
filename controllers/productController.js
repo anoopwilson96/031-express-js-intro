@@ -34,6 +34,7 @@ const postProduct = async(req,res)=>{
   //console.log(product)
   await product.save()
     res.status(201).json(product)
+    console.log(product)
     
   } catch (error) {
     res.status(400).send('Error 400: bad request')
