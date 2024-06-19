@@ -43,10 +43,28 @@ const postProduct = async(req,res)=>{
   
 }
 
-const updateProduct = (req,res)=>{
+
+
+
+
+
+const updateProduct = async (req,res)=>{
+  try {
+  const updatedProduct = await Product.findByIdAndUpdate(req.params.productId,req.body,{new:true})
+  res.status(200).send(updatedProduct)
+    
+  } catch (error) {
+
+    res.status(500).send('Internal server error')
+    
+  }
+
+
   
-  res.send('Code for : Update a product')
+ 
 }
+
+
 
 const deleteProduct = (req,res)=>{
   res.send('Code for : Delete a product')
