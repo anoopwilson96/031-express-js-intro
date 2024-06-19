@@ -45,7 +45,7 @@ const postCategory = async (req,res)=>{
 // update a category
 
 
-const patchCateGory = async (req,res)=>{
+const patchCategory = async (req,res)=>{
   try {
     const updatedCategory = await Category.findByIdAndUpdate(req.params.categoryId,req.body, {new:true})
     res.status(200).send(updatedCategory)
@@ -81,6 +81,6 @@ const deleteCategory = async (req, res) => {
   getCategories,
   getCategoryById,
   postCategory,
-  patchCateGory,
+  patchCategory,
   deleteCategory
 }
