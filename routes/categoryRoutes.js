@@ -1,6 +1,6 @@
 const express = require('express');
 const Category = require('../model/categoryModel');
-const { getCategories, getCategoryById, postCategory, patchCateGory, deleteCategory } = require('../controllers/categoryController');
+const { getCategories, getCategoryById, postCategory, patchCategory, deleteCategory } = require('../controllers/categoryController');
 const router = express.Router()
 
 
@@ -18,7 +18,7 @@ router.post('/',postCategory)
 
 // Update category
 
-router.patch('/:categoryId',patchCateGory)
+router.patch('/:categoryId',patchCategory)
 
 // Delete a category
 
