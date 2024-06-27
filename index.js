@@ -13,15 +13,9 @@ app.use('/products',productRoutes)
 app.use('/categories',categoryRoutes)
 
 
-
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
-
-
-
-
-// getting-started.js
 
 
 main() .then(()=>{console.log('connected')})  .catch(err => console.log(err));
